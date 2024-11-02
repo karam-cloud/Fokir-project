@@ -1,0 +1,679 @@
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 10px;
+}
+/* ^home page */
+.navbar{
+    background-image: url("../images/hero\ img.jpg");
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.navbar .leyer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0,.8);
+}
+
+.left{
+    color: #ff305b;
+    position: absolute;
+    left:5rem;
+    top: 1.25rem;
+    font-size: 1.875rem;
+    font-weight: 400;
+    /* background-color: red; */
+}
+.nav{
+    display: inline-block;
+}
+.right{
+        position: absolute;
+        right: 5rem;  
+        /* background-color: red; */
+        margin-top: 1.875rem;
+
+
+    }
+.right ul li  {
+    display: inline-block;
+    margin-right: 1.75rem;
+
+}
+.right ul li:hover a{
+
+    color: #ff305b;
+    transition : color .5s
+}
+.right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+/* ^content on Home page */
+    .content{
+        color: white;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        line-height: 1.5;
+        font-size :40px;
+    }
+    .content h2{
+        color: #ff305b;
+        font-weight: 700;
+    }
+/* !animation on home page */
+/* تنسيق الحاوية */
+.word-container {
+    position: relative;
+    margin-right: 127px;
+}
+  /* تنسيق الكلمة */
+    .word {
+    position: absolute;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: #ff305b;
+    margin-left : 5px;
+    }
+  /* حركة الكلمة الأولى */
+    .word1 {
+    opacity: 1;
+    animation-name: slideOut;
+    }
+  /* حركة الكلمة الثانية */
+    .word2 {
+    animation-name: slideIn;
+    }
+  /* تعريف keyframes للكلمة الأولى */
+    @keyframes slideOut {
+    0%, 50% { opacity: 1; transform: translateX(0); }
+    50.01%, 100% { opacity: 0; transform: translateX(-100%); }
+    }
+  /* تعريف keyframes للكلمة الثانية */
+    @keyframes slideIn {
+    0%, 50% { opacity: 0; transform: translateX(100%); }
+    50.01%, 100% { opacity: 1; transform: translateX(0); }
+        }
+/* ! i want to do section two  */
+.sec-two{
+    margin-top: 80px;
+    /* padding: 40px 20px 40px 40px; */
+    /* width: 100%; */
+    background-color: #fff;
+    overflow: hidden;
+    color: #555555;
+    height: 90vh;
+
+}
+.sec-two .photo {
+    width: 30%;
+    height: 80%;
+    border: 3px solid rgb(54, 54, 112);
+    float: left;
+    position: relative;
+    margin-left: 50px;
+
+}
+.sec-two img{
+    width: 100%;
+    height: 100%;
+    transform: translate(7px , 7px);
+
+}
+.sec-two .photo::after{
+    content: "";
+    /* background-color: #d3cdcd96; */
+    position: absolute;
+    top: .4375rem; ;
+    left: .4375rem;
+    height: 100%;
+    width: 100%;
+    transform: translateY(50%);
+    overflow: hidden;
+}
+.sec-two .photo:hover::after{
+    background-color: #d3cdcd96;
+    transform: translateY(0);
+    transition: transform 500ms ;
+}
+.sec-two .text{
+    font-size: 20px;
+    width: 50%;
+    float: left;
+    padding-left: 3rem;
+}
+.text h3{
+    padding-bottom: 5px;
+    position: relative;
+    padding-left:5px;
+}
+.text h3::after{
+    content: "";
+    background-color: red;
+    height: 50%;
+    width: 2px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+.text .bord-btm{
+    border-bottom: 1px dotted #141212;
+    border-width: 50%;
+    padding-bottom: 10px;
+}
+.under-txt{
+    display: flow-root;
+    line-height: 2;
+    padding-top: 10px;
+}
+.under-txt .left-und{
+    /* background-color: blueviolet; */
+    float: left;
+    width: 50%;
+
+}
+.under-txt .right-und{
+    /* background-color: chocolate; */
+    float: left;
+    width: 50%;
+
+}
+.under-txt .bold{
+    font-size : 20px; ;
+}
+.text .btn{
+    background-color:#ff305b;
+    font-size: 20px;
+    color: white;
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    margin-right: 5px;
+    
+}
+.sec-two .btn i{
+    /* background-color: #ff305b; */
+    /* color: aqua; */
+    width: 20px;
+}
+.sec-two .btn:hover{
+    background-color: orangered;
+}
+
+/* !we neee to do three section  */
+.sec-three{
+    background-color: rgba(117, 126, 126, 0.384);
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    /* padding: 20px; */
+}
+.sec-three .title {
+    /* background-color: #ff305b; */
+    width: fit-content;
+    padding: 10px;
+    color: #555555;
+    left: 50%;
+    /* top: 20px; */
+    transform: translateX(-50%);
+    position: relative;
+    border-bottom: 5px solid red;
+    margin-block: 30px ;
+    font-size:30px;
+    
+}
+.sec-three .title::before{
+    content: "";
+    background-color: red;
+    height: 5px;
+    width: 50%;
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec-three .title::after{
+    content: "";
+    background-color: red;
+    height: 5px;
+    width: 50%;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec-three .card{
+    /* background-color: rgba(117, 126, 126, 0.384); */
+    width: 24%;
+    /* height: 80%; */
+    font-size: 25px;
+    padding: 20px;
+    color:#555555;
+    float: left;
+    transform: translate(30px , 30px);
+    border: 1px solid transparent;
+    transition: background-color 500ms , color 500ms ;
+
+}
+
+.sec-three .card:hover{
+    background-color: rgb(255, 255, 247);
+    color: #555555;
+    /* transition: transform 500ms linear; */
+    
+}
+.sec-three .card h3{
+    margin-block: 30px ;
+    /* background-color: #141212; */
+}
+.sec-three .card:hover i{
+    transform:scale(1.9);
+    transition: 200ms linear;
+}
+.sec-three .card i{
+    color: #ff305b;
+}
+
+/* ! we need to our portfoliio  */
+
+.our-pfolio{
+    background-color: rgb(240, 247, 247);
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+
+}
+
+.our-pfolio .title-port {
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid red;
+    padding-bottom: 5px;
+    /* margin-bottom: 2px; */
+    margin-block: 20px ;
+    font-size:40px;
+
+}
+.our-pfolio .title-port::before{
+    content: "";
+    background-color: red;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.our-pfolio .title-port::after{
+    content: "";
+    background-color: red;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.our-pfolio .kerword{
+    /* padding-top: 20px;
+    padding-bottom: 10px; */
+    margin-top: 53px;
+    padding-bottom: 16px;
+
+
+}
+.our-pfolio .kerword a{
+    text-decoration: none;
+    color: #555555;
+    font-size: 20px;
+    margin-inline: 6px;
+}
+.our-pfolio .our-photo img{
+    width: 30%;
+}
+
+
+
+
+
+/* *i want to do clievt's feedback */
+
+    /* Client Section */
+.client {
+    /* background-color: rgb(255, 255, 255); */
+    position: relative;
+    height: 200px;
+    height: 100vh;
+    /* margin-top: 20px; */
+}
+
+.client h2 {
+    color: #555555;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    border-bottom: 5px solid #ff305b;
+    font-size: 40px; /* Consider using a more standard font size */
+    margin-top: 50px;  
+    padding-bottom : 10px;
+}
+
+/* Decorative lines for the heading */
+.client h2::before,
+.client h2::after {
+    content: "";
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.client h2::before {
+    height: 5px; /* Thickness of the top line */
+    background-color: #ff305b;
+    top: 115%; /* Position below the heading */
+}
+
+.client h2::after {
+    margin-bottom : 5px;
+    height: 5px; /* Thickness of the bottom line */
+    background-color: #ff305b;
+    top: 85%; /* Position above the heading */
+}
+
+.client .feed {
+    background-color: rgb(241, 241, 241);
+    color: #555555;
+    padding: 40px 30px; /* Consolidated padding */
+    width: 60%;
+    position: relative;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+    overflow: auto;
+}
+
+/* !Decorative circle behind the feedback */
+.client .feed::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border: 80px solid rgba(255, 0, 0, 0.738);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.client .feed .imgfeed {
+    float: left; /* Aligns image to the left */
+}
+
+.client .feed .textfeed {
+    margin-left: 170px; /* Space between image and text */
+}
+
+.client .feed .textfeed h4 {
+    padding-bottom: 15px;
+    font-size: 20px; /* Consider using a more standard font size */
+}
+
+.client .feed .textfeed h5 i {
+    margin-bottom: 12px;
+}
+
+.client .feed .textfeed p + i,
+.client .feed .textfeed i + i {
+    color: rgba(211, 211, 1, 0.788);
+    margin-top: 15px;
+}
+
+.client .feed img {
+    width: 120px;
+    height: 120px;
+    border: 0px solid red; /* Corrected typo from 'sloid' to 'solid' */
+    border-radius: 50%; /* Creates a circular image */
+}
+
+/*  !i want to do our blog */
+.our-blog h3{
+    /* background-color: #ff305b; */
+    width: fit-content;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #555555;
+    margin-bottom: 30px;
+    margin-top:-100px;
+    border-bottom: 2px solid red;
+    padding-bottom: 8px;
+    font-size: 40px;
+}
+.our-blog h3::before{
+    content: "";
+    background-color: red;
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.our-blog h3::after{
+    content: "";
+    background-color: red;
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.our-blog{
+    display: flow-root;
+    margin-top: 20px;
+}
+.our-blog .cards{
+    /* padding-inline: 25px; */
+    margin-left: 80px;
+    background-color: red;
+}
+.our-blog .card{
+    height: 30%;
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+    font-size:20px;
+
+}
+.our-blog .card .img-card img {
+    width: 100%;
+    height: 100%;
+}
+.our-blog .card .cont-card{
+    padding: 15px;
+    line-height: 1.6;
+    color: #555555;
+}
+.our-blog .card .cont-card p{
+    font-size:16px;
+}
+
+/* &i want to do contact us  */
+.contact-us{
+    height: 100vh;
+    background-color: #fffdfd;
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+
+}
+.contact-us h3{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid red;
+    width: fit-content;
+    margin-top: 50px;
+    padding-bottom: 5px;
+    font-size:40px;
+    color: #555555;
+    
+}
+.contact-us h3::before{
+    content: "";
+    background-color: red;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact-us h3::after{
+    content: "";
+    background-color: red;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact-us form{
+    height : 80%;
+    /* background-color:red; */
+    margin-top:100px;
+    padding-top:20px;
+    /* font-size:80px; */
+}
+.contact-us .fristline input{
+    width: 30%;
+    font-size:26px;
+
+}
+.contact-us input{
+    width: 60%;
+    height:60px;
+    font-size:26px;
+
+}
+.contact-us input,.textarea textarea{
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 3px;
+    
+}
+.contact-us .button input {
+    background-color: rgb(224, 19, 19);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    position: absolute;
+    left: 20%;
+    width:200px;
+    /* height:30%; */
+}
+textarea{
+    width:820px;
+    height:100px;
+    font-size:26px;
+
+}
+.contact-us form div{
+    margin-top: 25px;
+}
+
+
+
+
+/* !i want to do footer */
+.footer{
+    height: 25vh;
+    background-color: #141212d7;
+    color: #ece3e5;
+    text-align: center;
+    font-size: 18px;
+    padding-block: 10px;
+}
+.footer div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.footer i{
+    padding-right: 25px ;
+    padding-bottom:10px; 
+    font-size:16px;
+}
+.footer i:hover{
+    color:red;
+}
+.footer .theme{
+    padding-top: 15px;
+}
+.footer .theme p{
+    font-size:15px;
+}
+.footer a{
+    color: red;
+    text-decoration: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
